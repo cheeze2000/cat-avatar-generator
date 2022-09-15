@@ -10,7 +10,7 @@ function Header() {
                     layout="fill"
                 />
             </div>
-            <div className="flex items-center px-3 font-nunito text-3xl sm:text-4xl text-center text-pcorange">
+            <div className="flex items-center px-3 font-nunito font-bold text-3xl sm:text-4xl text-center text-pcorange">
                 Cat Avatar Generator
             </div>
         </div>
