@@ -8,6 +8,10 @@ module.exports = {
         extend: {
             colors: {
                 "pcblue": "#a5c2e1",
+                "pcorange": "#dd3e00",
+            },
+            fontFamily: {
+                "nunito": ["Nunito", "sans-serif"],
             },
         },
     },
