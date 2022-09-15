@@ -5,7 +5,11 @@ module.exports = {
         "pages/**/*.js",
     ],
     theme: {
-        extend: {},
+        extend: {
+            colors: {
+                "pcblue": "#a5c2e1",
+            },
+        },
     },
     plugins: [],
 };
