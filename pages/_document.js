@@ -5,7 +5,7 @@ export default function Document() {
         <Html lang="en">
             <Head>
                 <meta name="description" content="A free and open-source API to generate cat avatars" />
-                <meta name="theme-color" content="#A5C2E1" />
+                <meta name="theme-color" content="#F36A5D" />
                 <meta property="og:description" content="A free and open-source API to generate cat avatars" />
                 <meta property="og:image" content="/logo.png" />
                 <meta property="og:title" content="Cat Avatar Generator" />
