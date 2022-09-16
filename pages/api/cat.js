@@ -14,7 +14,7 @@ function randInt(rng, n) {
 }
 
 function randomAssets(seed) {
-    const dir = path.join("public", "cat");
+    const dir = path.join(process.cwd(), "assets");
     const rng = seedrandom(seed);
 
     const assets = [
