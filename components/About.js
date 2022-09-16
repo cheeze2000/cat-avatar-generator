@@ -27,7 +27,7 @@ function About() {
                     >
                         original version
                     </a>
-                    <span> by David Revoy.</span>
+                    <span>.</span>
                 </div>
                 <div>
                     <span>The artworks used in the API are designed by </span>
@@ -46,8 +46,9 @@ function About() {
                         target="_blank"
                         rel="noreferrer"
                     >
-                        Creative Commons Attribution 4.0 International license.
+                        Creative Commons Attribution 4.0 International license
                     </a>
+                    <span>.</span>
                 </div>
             </div>
         </div>
