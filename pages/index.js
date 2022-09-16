@@ -1,3 +1,4 @@
+import About from "~/components/About";
 import Demo from "~/components/Demo";
 import Header from "~/components/Header";
 import Usage from "~/components/Usage";
@@ -8,6 +9,7 @@ function Home() {
             <Header />
             <Demo />
             <Usage />
+            <About />
         </div>
     );
 }
