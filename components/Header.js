@@ -20,6 +20,8 @@ function Header() {
                     <a
                         className="hover:underline underline-offset-2"
                         href="https://www.davidrevoy.com/"
+                        target="_blank"
+                        rel="noreferrer"
                     >
                         David Revoy
                     </a>
