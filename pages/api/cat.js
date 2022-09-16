@@ -54,6 +54,7 @@ export default async function handler(req, res) {
             .png()
             .toBuffer();
 
+        if (cache.size == 100) cache.clear();
         cache.set(seed, buffer);
     }
 
