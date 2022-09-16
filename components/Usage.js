@@ -8,7 +8,7 @@ function Usage() {
                 <hr className="mt-1" />
             </div>
             <div className="font-inconsolata text-2xl">
-                /api/cat?name=Waffles
+                /api/cat?name=Carrot
             </div>
         </div>
     );
