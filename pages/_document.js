@@ -7,6 +7,7 @@ export default function Document() {
                 <meta name="description" content="A free and open-source API to generate cat avatars" />
                 <meta name="theme-color" content="#A5C2E1" />
                 <meta property="og:description" content="A free and open-source API to generate cat avatars" />
+                <meta property="og:image" content="/logo.png" />
                 <meta property="og:title" content="Cat Avatar Generator" />
                 <meta property="og:type" content="website" />
                 <meta property="og:url" content="https://cat-avatars.vercel.app" />
