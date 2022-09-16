@@ -8,6 +8,7 @@ function Header() {
                     src="/logo.png"
                     alt="Cat avatar generator logo"
                     layout="fill"
+                    priority="true"
                 />
             </div>
             <div className="flex flex-col justify-center font-nunito">
