@@ -2,11 +2,18 @@ import Image from "next/image";
 import { useState } from "react";
 
 function Demo() {
-    const [image, setImage] = useState(false);
+    const [showImage, toggleImage] = useState(false);
+    const [image, setImage] = useState("");
+    const [tempImage, setTempImage] = useState("");
 
     function submit(event) {
         event.preventDefault();
-        setImage(true);
+
+        const name = encodeURIComponent(tempImage);
+        if (name.trim().length > 0) {
+            toggleImage(true);
+            setImage(name);
+        }
     }
 
     return (
@@ -25,16 +32,17 @@ function Demo() {
                     className="grow px-3 py-2 text-2xl rounded border border-black"
                     type="text"
                     placeholder="Cat's name"
+                    onInput={e => setTempImage(e.target.value)}
                 />
                 <button className="px-6 py-2 mx-auto w-fit text-xl text-white bg-pcorange rounded">
                     Generate
                 </button>
             </form>
             {
-                image && (
+                showImage && (
                     <div className="relative mx-auto max-w-[256px] aspect-square">
-                        <Image
-                            src="/logo.png"
+                        <img
+                            src={`/api/cat?name=${image}`}
                             alt="generated cat avatar"
                             width="256"
                             height="256"
