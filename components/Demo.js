@@ -13,6 +13,8 @@ function Demo() {
         if (name.trim().length > 0) {
             toggleImage(true);
             setImage(name);
+        } else {
+            toggleImage(false);
         }
     }
 
