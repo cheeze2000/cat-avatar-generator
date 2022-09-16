@@ -3,6 +3,8 @@ import path from "path";
 import seedrandom from "seedrandom";
 import sharp from "sharp";
 
+const cache = new Map();
+
 function hash(input) {
     return crypto.createHash("sha256").update(input ?? "").digest("hex");
 }
@@ -33,19 +35,27 @@ function randomAssets(seed) {
 export default async function handler(req, res) {
     const { name } = req.query;
     const seed = hash(name);
-    const assets = randomAssets(seed);
+    let buffer;
 
-    const buffer = await sharp({
-        create: {
-            width: 256,
-            height: 256,
-            channels: 4,
-            background: { r: 0, g: 0, b: 0, alpha: 0 },
-        },
-    })
-        .composite(assets.map(a => ({ input: a })))
-        .png()
-        .toBuffer();
+    if (cache.has(seed)) {
+        buffer = cache.get(seed);
+    } else {
+        const assets = randomAssets(seed);
+
+        buffer = await sharp({
+            create: {
+                width: 256,
+                height: 256,
+                channels: 4,
+                background: { r: 0, g: 0, b: 0, alpha: 0 },
+            },
+        })
+            .composite(assets.map(a => ({ input: a })))
+            .png()
+            .toBuffer();
+
+        cache.set(seed, buffer);
+    }
 
     res.setHeader("Content-Type", "image/png");
     res.send(buffer);
