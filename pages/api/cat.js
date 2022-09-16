@@ -4,7 +4,7 @@ import seedrandom from "seedrandom";
 import sharp from "sharp";
 
 function hash(input) {
-    return crypto.createHash("sha256").update(input).digest("hex");
+    return crypto.createHash("sha256").update(input ?? "").digest("hex");
 }
 
 function randInt(rng, n) {
