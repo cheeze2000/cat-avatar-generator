@@ -13,7 +13,7 @@ function Build() {
                 Not satisfied with the generator? You can always make your own!
             </div>
             <Link href="/custom">
-                <a className="px-6 py-3 mx-auto w-fit text-xl text-white bg-pcorange rounded">
+                <a className="px-6 py-2 mx-auto w-fit font-source text-xl text-white bg-pcorange rounded">
                     Customise
                 </a>
             </Link>
